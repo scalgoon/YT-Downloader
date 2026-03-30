@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self'" />
+    <title>VideoDeck</title>
+    <link rel="stylesheet" href="home.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="titleBar">
+        <p class="windowTitle" id="windowTitle">VideoDeck</p>
+    </div>
+    <div class="menuBar">
+        <div class="menuLeft">
+            <input type="text" class="importURL" id="importURL" placeholder="Example: www.youtube.com">
+        </div>
+        <div class="menuMiddle">
+            <button class="menuButtons" id="search">
+                <i class='bx bx-search'></i>
+            </button>
+        </div>
+        <div class="menuRight">
+            <button class="menuButtons" id="menu">
+                <i class='bx bx-dots-horizontal-rounded'></i>
+            </button>
+        </div>
+    </div>
+    <img src="./assets/img.webp" class="titlebarImg">
+    <main>
+        <div class="bgStripe">
+            <div class="pageIcon">
+                <i class='bx bxs-memory-card'></i>
+            </div>
+        </div>
+        <div class="importerDiv">
+            <div class="inputHolder">
+                <div class="inputLeft">
+                    <div class="processHolder">
+                        <p class="titleTxt">Selected Video</p>
+                    </div>
+                </div>
+                <div class="inputDivider"></div>
+                <div class="inputRight">
+                    <p class="titleTxt">Format Options</p>
+                    <div class="formatOptions">
+                        <p class="radioLabel">MP3</p>
+                        <input type="radio" name="mp3" id="mp3" checked>
+                        <label for="mp3"></label>
+                        <p class="radioLabel">MP4</p>
+                        <input type="radio" name="mp3" id="mp4">
+                        <label for="mp4"></label>
+                        <p class="radioLabel">Quality</p>
+                        <input type="range" name="quality" id="quality" min="0" max="100" value="0" step="33.3">
+                        <div class="sliderFormats">
+                            <span>360p</span>
+                            <span>480p</span>
+                            <span>720p</span>
+                            <span>1080p</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nextBtn" id="nextBtn">
+            <i class='bx bx-right-arrow-circle'></i>
+        </div>
+    </main>
+
+    <script src="./scripts/slider.js"></script>
+</body>
+
+</html>
