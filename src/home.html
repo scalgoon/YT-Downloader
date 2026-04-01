@@ -41,12 +41,19 @@
                 <div class="inputLeft">
                     <div class="processHolder">
                         <p class="titleTxt">Selected Video</p>
+                        <div class="videoDetails" id="videoDetails">
+                            <div class="videoThumbnailGroup">
+                                <img src="" alt="Video Thumbnail" id="thumbnail" class="videoThumbnail" width="316" height="166">
+                                <p class="videoTitle" id="title">‎ </p>
+                            </div>
+                            <p class="videoChannel" id="channel"></p>
+                        </div>
                     </div>
                 </div>
                 <div class="inputDivider"></div>
                 <div class="inputRight">
                     <p class="titleTxt">Format Options</p>
-                    <div class="formatOptions">
+                    <div class="formatOptions disabled" id="formatOptions">
                         <p class="radioLabel">MP3</p>
                         <input type="radio" name="mp3" id="mp3" checked>
                         <label for="mp3"></label>
@@ -65,12 +72,13 @@
                 </div>
             </div>
         </div>
-        <div class="nextBtn" id="nextBtn">
+        <div class="nextBtn disabled" id="submit">
             <i class='bx bx-right-arrow-circle'></i>
         </div>
     </main>
 
     <script src="./scripts/slider.js"></script>
+    <script src="./scripts/videoHandler.js"></script>
 </body>
 
 </html>

@@ -19,14 +19,14 @@ const path = require('path');
             webPreferences: {
                 nodeIntegration: true,
                 contextIsolation: true,
-                // preload: path.join(__dirname, 'preload.js')
+                preload: path.join(__dirname, 'preload.js')
             }
         });
 
         mainWindow.loadFile(path.join(__dirname, "./src/home.html"));
         mainWindow.setMenuBarVisibility(false);
         mainWindow.center();
-        // mainWindow.webContents.openDevTools();
+        mainWindow.webContents.openDevTools();
         // mainWindow.setProgressBar(100)
 
         ipcMain.handle('system:closeApp', () => {

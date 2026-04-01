@@ -7,3 +7,7 @@ contextBridge.exposeInMainWorld('myAPI', {
     startProgress: () => ipcRenderer.invoke('system:startProgress'),
     stopProgress: () => ipcRenderer.invoke('system:stopProgress'),
 });
+
+contextBridge.exposeInMainWorld('ytdl', {
+    getInfo: async (...args) => await ytdl.getBasicInfo(...args)
+});
